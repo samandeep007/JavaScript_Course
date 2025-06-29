@@ -54,7 +54,6 @@ console.log("Arzoyi".includes("zo")); //returns a boolean --> checks if a substr
 console.log("Mahima".startsWith('M')); //Checks if it starts with a specific letter or not.
 console.log("Taran".endsWith('m'));
 
-
 //Join uses separator, while split uses delimiter
 
 
