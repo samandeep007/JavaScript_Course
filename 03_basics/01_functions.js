@@ -47,3 +47,4 @@ console.log(loginUserMessage()); //undefined just logged in --> Please enter use
 
 console.log(loginUserMessage("tarandeep97"))
 
+//falsy values: null, 0, undefined, false, NaN
