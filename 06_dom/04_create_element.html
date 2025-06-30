@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element in DOM</title>
+</head>
+<style>
+    .bg-black {
+        background-color: black;
+        color: white;
+    }
+</style>
+<body class="bg-black"> 
+    
+</body>
+<script>
+    //create a div element
+    const myDiv = document.createElement('div');
+    myDiv.className = "main";
+    myDiv.id = Math.round(Math.random() * 10 + 1);
+    Object.assign(myDiv.style, {
+        backgroundColor: "pink",
+        color: "black",
+        padding: "10px"
+    })
+    myDiv.setAttribute("title", "generatedTitle");
+    // div.innerText = "My name is Samandeep Singh" //Bring and overwrite
+    const text = document.createTextNode("Samandeep Singh");
+    myDiv.appendChild(text);
+
+   //Append the div element to the DOM 
+    document.body.appendChild(myDiv);
+</script>
+</html>

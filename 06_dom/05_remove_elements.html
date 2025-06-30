@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove and Edit elements in javascript</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+   function addLanguage(lang){
+    const list_item = document.createElement('li');
+    list_item.innerText = lang
+    document.querySelector('.language').appendChild(list_item);
+   }
+    
+   addLanguage('Swift'); //Tree is being traversed each time to reach the end
+   addLanguage('Java');
+   addLanguage('TypeScript')
+
+   function addOptiLanguage(lang_name){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(lang_name));
+    document.querySelector('.language').appendChild(li);
+   }
+
+   addOptiLanguage("C++");
+   addOptiLanguage("C#");
+
+   //edit
+   const secondLang = document.querySelector('li:nth-child(2)');
+   //secondLang.innerHTML = "Mojo"
+   const newli = document.createElement('li');
+   newli.textContent = "Mojo";
+   secondLang.replaceWith(newli); 
+
+   //edit
+   const firstLang = document.querySelector('li:nth-child(1)');
+   firstLang.outerHTML = '<li>Sandhu</li>'
+
+   //remove
+   const lastLang = document.querySelector('li:last-child');
+   lastLang.remove();
+</script>
+</html>
