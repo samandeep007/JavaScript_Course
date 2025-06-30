@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Selectors</title>
+  </head>
+  <style>
+    .bg-black {
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+  </style>
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">DOM Selectors <span style="display: none">test text</span></h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, amet?
+      </p>
+      <input type="password" name="password" id="password">
+      <!-- Behind the scenes, DOM treats class selector as className -->
+       <!--
+      document.gebi(id).getAttribute()
+      document.gebi(id).setAttribute(attribute_name, value) 
+      document.gebi(id).textContent //displays the hidden content as well
+      document.gebi(id).innerText  //displays only what is visible
+      document.gebi(id).innerHTML //displays the whole HTML enclosed within tags
+      
+      Using CSS Selectors
+      
+      document.querySelector('h1') //gives the first h1 in the document
+      document.querySelector('.className')
+      document.querySelector('#id_name')
+      document.querySelector('input[type="password"]')
+
+
+      --> 
+    </div>
+  </body>
+</html>
