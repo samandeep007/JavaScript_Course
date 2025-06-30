@@ -7,20 +7,29 @@
   </head>
   <style>
     .bg-black {
-        background-color: black;
-        color: white;
-        padding: 10px;
+      background-color: black;
+      color: white;
+      padding: 10px;
     }
   </style>
   <body class="bg-black">
     <div>
-      <h1 id="title" class="heading">DOM Selectors <span style="display: none">test text</span></h1>
+      <h1 id="title" class="heading">
+        DOM Selectors <span style="display: none">test text</span>
+      </h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, amet?
       </p>
-      <input type="password" name="password" id="password">
+      <input type="password" name="password" id="password" />
+
+      <ul>
+        <li class="list-item">Saman</li>
+        <li class="list-item">Deep</li>
+        <li class="list-item">Singh</li>
+        <li class="list-item">Sandhu</li>
+      </ul>
       <!-- Behind the scenes, DOM treats class selector as className -->
-       <!--
+      <!--
       document.gebi(id).getAttribute()
       document.gebi(id).setAttribute(attribute_name, value) 
       document.gebi(id).textContent //displays the hidden content as well
@@ -35,7 +44,67 @@
       document.querySelector('input[type="password"]')
 
 
-      --> 
+      document.querySelector('ul');
+      const myListItems = myUl.querySelectorAll('li') 
+      myListItems.forEach((item) => item.style = "color: pink")
+
+      querySelectorAll: Returns a static NodeList of all elements in the document that match the specified CSS selector(s).
+      The NodeList is not live, meaning it doesn't update if the DOM changes.
+
+      Example: Selecting all elements with class="my-class"
+      
+      const elements = document.querySelectorAll('.my-class');
+      Returns a NodeList, e.g., [div.my-class, p.my-class]
+      
+      You can iterate over it using forEach, for...of, or convert to an array with Array.from(elements).
+
+      If no elements match, an empty NodeList is returned.
+      
+      Supports complex selectors like 'div > p', '[data-type="value"]', or ':hover'.
+
+      -->
+
+
+
+
+
+
+      <!-- 
+      Complex self example
+      
+      const h1 = document.querySelectorAll('h1') | NodeList
+      
+      Converting nodelist into array
+      const arr = Array.from(h1);
+
+      arr[0].style = "color: red" 
+
+      h1[0].style = "color: pink" is also possible
+      -->
+
+
+
+
+      <!-- 
+      document.gebc: Shorthand for document.getElementsByClassName.
+      
+      Returns a live HTMLCollection of all elements in the document with the specified class name.
+
+      "Live" means the collection updates automatically if the DOM changes (e.g., adding/removing elements with the class).
+
+      Example: Selecting all elements with class="my-class"
+      
+      const elements = document.getElementsByClassName('my-class');
+
+      Returns an HTMLCollection, e.g., [div.my-class, p.my-class]
+
+      Can be iterated with for...of or converted to an array with Array.from(elements).
+
+      If no elements match, an empty HTMLCollection is returned.
+
+      Only accepts a single class name; for multiple classes, use querySelectorAll('.class1.class2'). -->
+
+
     </div>
   </body>
 </html>
