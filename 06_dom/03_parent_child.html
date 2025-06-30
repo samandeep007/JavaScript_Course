@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Elements in DOM</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent"> 
+        <!-- saman -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent); //Object
+    console.log(parent.children); //HTMLCollection
+
+    for(let child of parent.children){
+        console.log(child.innerHTML);
+    }
+
+    parent.children[0].style = "color: orange";
+    console.log(parent.firstElementChild); //returns the first child in parent
+    console.log(parent.lastElementChild); //returns the last element in parent
+
+    const day1 = document.querySelector('.day');
+    console.log(day1.parentElement); //returns the parent element of the child
+    console.log(day1.parentNode);
+    console.log(day1.nextElementSibling); //next child
+    console.log("NODES: ", parent.childNodes) //whitespaces and new line characters are also considered as childNodes
+
+    //element.firstElementChild
+    //element.lastElementChild
+    //child.parentElement
+    //child.parentNode
+    //parent.childNode --> NodeList --> forEach, for..of
+    //parent.children --> HTMLCollection --> for..of
+</script>
+</html>
